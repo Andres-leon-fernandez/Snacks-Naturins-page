@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naturin's – Snacks Naturales del Perú</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="font-['Inter'] bg-[#FDF6E3] text-[#2c1a00] min-h-screen flex flex-col">
+
+  <!-- ── HEADER ── -->
+  <header
+    class="sticky top-0 w-full z-50 bg-white/97 backdrop-blur-md border-b-2 border-[#F1860B] h-[70px] flex items-center justify-between px-10 gap-6 shadow-sm">
+
+    <!-- Logo + Buscador -->
+    <div class="flex items-center gap-5">
+      <a href="index.html">
+        <img src="img/Naturins-logo.svg" alt="Naturin's" class="h-[42px] w-auto" />
+      </a>
+      <div
+        class="flex items-center border-[1.5px] border-[#e0d0c0] rounded-full overflow-hidden focus-within:border-[#F1860B] focus-within:ring-2 focus-within:ring-[#F1860B]/20 transition">
+        <input type="text" placeholder="Buscar productos…"
+          class="px-4 py-2 text-sm outline-none w-48 bg-transparent text-[#2c1a00]" />
+        <button
+          class="px-4 py-2 bg-[#98C01E] hover:bg-[#E52619] text-white text-sm font-semibold transition cursor-pointer">
+          Buscar
+        </button>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav>
+      <ul class="flex items-center gap-6 font-['Inter'] text-gray-700">
+        <li>
+          <a href="Productos.html"
+            class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Productos</a>
+        </li>
+        <li>
+          <a href="Nosotros.html"
+            class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Nosotros</a>
+        </li>
+        <li>
+          <a href="blog.html"
+            class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Blog</a>
+        </li>
+        <li>
+          <a href="Contacto.html"
+            class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Acciones -->
+    <div class="flex items-center gap-3">
+      <a href="#"
+        class="flex items-center gap-2 text-sm font-semibold text-[#733702] px-3 py-2 rounded-lg hover:bg-[#733702]/8 transition">
+        <i class="fa-solid fa-cart-shopping"></i> Carrito
+      </a>
+      <a href="#"
+        class="text-sm font-semibold text-[#E52619] border-[1.5px] border-[#E52619] rounded-full px-4 py-2 hover:bg-[#E52619] hover:text-white transition">
+        Iniciar sesión
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-grow"></main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="bg-[#733702] text-white border-t-4 border-[#F1860B] pt-14 pb-8 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-white/15">
+
+      <!-- Contacto -->
+      <div class="flex flex-col gap-3" id="contacto">
+        <h3 class="font-['Amaranth'] text-lg text-[#F2B707] border-b border-[#F2B707]/30 pb-2 mb-1">
+          Atención al cliente
+        </h3>
+        <p class="flex items-center gap-2 text-sm text-white/85">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:ventas@naturins.com.pe" class="hover:text-[#F2B707] transition">ventas@naturins.com.pe</a>
+        </p>
+        <p class="flex items-center gap-2 text-sm text-white/85">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+51933781822" class="hover:text-[#F2B707] transition">+51 933 781 822</a>
+        </p>
+        <div class="flex gap-3 mt-1">
+          <a href="https://www.facebook.com/people/Snacks-Naturins-Peru/61583317262050/" target="_blank"
+            aria-label="Facebook"
+            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#F1860B] hover:scale-110 transition">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/snacks_naturins" target="_blank" aria-label="Instagram"
+            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#F1860B] hover:scale-110 transition">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@snacks_naturins" target="_blank" aria-label="TikTok"
+            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#F1860B] hover:scale-110 transition">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=51933781822" target="_blank" aria-label="WhatsApp"
+            class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-[#F1860B] hover:scale-110 transition">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Libro de Reclamaciones -->
+      <div class="flex flex-col gap-3" id="reclamaciones">
+        <h3 class="font-['Amaranth'] text-lg text-[#F2B707] border-b border-[#F2B707]/30 pb-2 mb-1">
+          Libro de Reclamaciones
+        </h3>
+        <p class="text-sm text-white/85 leading-relaxed">
+          Accede a nuestro
+          <a href="#" class="text-[#F2B707] underline hover:text-white transition">Libro de Reclamaciones</a>
+          para registrar tu queja o sugerencia.
+        </p>
+        <p class="text-sm text-white/85 leading-relaxed">
+          Nos comprometemos a responder en el menor tiempo posible.
+        </p>
+      </div>
+
+      <!-- Métodos de Pago -->
+      <div class="flex flex-col gap-3" id="pagos">
+        <h3 class="font-['Amaranth'] text-lg text-[#F2B707] border-b border-[#F2B707]/30 pb-2 mb-1">
+          Métodos de Pago
+        </h3>
+        <div class="flex gap-3 flex-wrap">
+          <img src="img/yape.png" alt="Yape" class="w-12 h-auto rounded-lg bg-white p-1" />
+          <img src="img/bcp.png" alt="BCP" class="w-12 h-auto rounded-lg bg-white p-1" />
+          <img src="img/visa.png" alt="Visa" class="w-12 h-auto rounded-lg bg-white p-1" />
+          <img src="img/mastercard.png" alt="Mastercard" class="w-12 h-auto rounded-lg bg-white p-1" />
+        </div>
+        <a href="https://heyzine.com/flip-book/0a51e640a6.html" target="_blank"
+          class="inline-flex items-center gap-2 mt-3 px-4 py-2.5 bg-[#F1860B]/20 border border-[#F1860B] rounded-xl text-[#F2B707] text-sm font-semibold hover:bg-[#F1860B] hover:text-white transition no-underline">
+          <i class="fa-solid fa-book-open"></i>
+          Explorar catálogo online
+        </a>
+      </div>
+
+    </div>
+
+    <p class="text-center text-xs text-white/40 mt-6">
+      © 2025 Snacks Naturin's Perú. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <script src="js/main-js/carouse.js"></script>
+</body>
+
+</html>
