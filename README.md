@@ -61,6 +61,7 @@ La paleta de Snacks-Naturin's está diseñada para transmitir:
 - 🟢 Verde (natural): `#98C01E`
 - 🟠 Naranja: `#F1860B`
 - 🟡 Amarillo: `#F2B707`
+- 🟤 marrón: `#733702`
 
 ---
 
@@ -78,6 +79,9 @@ La paleta de Snacks-Naturin's está diseñada para transmitir:
 
 <!-- Amarillo -->
 <div class="bg-[#F2B707]"></div>
+
+<!-- Marrón -->
+<div class="bg-[#733702]"></div>
 ```
 
 ---

@@ -7,15 +7,18 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-[#F1860B]">
@@ -24,38 +27,86 @@
       <!-- Logo -->
       <figure>
         <a href="#">
-          <img src="img/Naturins-logo.svg" alt="Naturin's logo" class="w-[160px] h-auto">
+          <img src="img/Naturins-logo.svg" alt="Naturin's logo" class="w-[160px] h-auto" />
         </a>
       </figure>
-      <!-- Search -->
-      <form action="" class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
-        <input type="text" placeholder="Buscar" class="px-3 py-2 outline-none w-56">
-        <button type="submit" class="px-4 py-2 bg-[#98C01E] text-white hover:bg-[#E52619] transition">buscar</button>
+      <!-- Busqueda -->
+      <form action=""
+        class="flex items-center border border-gray-300 rounded-2xl overflow-hiddenfocus-within:border-[#F1860B] focus-within:ring-2 focus-within:ring-[#F1860B]/20 transition">
+        <input type="text" placeholder="Buscar" class="px-3 py-2 outline-none w-56" />
+        <button type="submit"
+          class="px-4 py-2 bg-[#98C01E] text-white rounded-tr-2xl rounded-br-2xl hover:bg-[#E52619] transition">
+          buscar
+        </button>
       </form>
     </div>
-    <div class="">
+    <nav>
       <ul class="flex items-center gap-6 font-['Inter'] text-gray-700">
-        <li><a href="#" class="text-xl hover:text-[#E52619] transition">Inicio</a></li>
-        <li><a href="#" class="text-xl hover:text-[#E52619] transition">Productos</a></li>
-        <li><a href="#" class="text-xl hover:text-[#E52619] transition">Nosotros</a></li>
-        <li><a href="#" class="text-xl hover:text-[#E52619] transition">Contacto</a></li>
+        <li>
+          <a href="#"
+            class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Productos</a>
+        </li>
+        <li>
+          <a href="#"
+            class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Nosotros</a>
+        </li>
+        <li>
+          <a href="#"
+            class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Blog</a>
+        </li>
+        <li>
+          <a href="#"
+            class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Contacto</a>
+        </li>
       </ul>
-    </div>
+    </nav>
     <div class="flex items-center gap-4 font-['Inter']">
-
-      <a href="#" class="text-2xl hover:text-[#E52619] transition">
+      <a href="#"
+        class="text-2xl relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">
         🛒 Carrito
       </a>
 
       <a href="#"
-        class="px-4 py-2 border border-[#E52619] text-[#E52619] rounded-lg hover:bg-[#E52619] hover:text-white transition">
+        class="px-4 py-2 border border-[#E52619] text-[#E52619] rounded-2xl hover:bg-[#E52619] hover:text-white transition">
         Iniciar sesión
       </a>
-
     </div>
   </header>
   <main>
+    <section id="carousel-section" class="w-full flex flex-col items-center py-10 gap-6">
+      <!-- CARRUSEL -->
+      <div class="relative w-[85%] h-[450px] overflow-hidden rounded-xl border-3 border-[#733702]">
+        <div id="carousel" class="w-full h-full flex transition-transform duration-500">
+          <img src="img/FOTOS_GRUPALES/CAMOTE.jpg" class="w-full h-full object-cover flex-shrink-0" />
+          <img src="img/FOTOS_GRUPALES/HABA.jpg" class="w-full h-full object-cover flex-shrink-0" />
+          <img src="img/FOTOS_GRUPALES/MANÍS.jpg" class="w-full h-full object-cover flex-shrink-0" />
+        </div>
+
+        <button onclick="prevSlide()"
+          class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-3xl hover:bg-[#F1860B]/40">
+          <i class="fa-solid fa-circle-left"></i>
+        </button>
+
+        <button onclick="nextSlide()"
+          class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-3xl hover:bg-[#F1860B]/40">
+          <i class="fa-solid fa-circle-right"></i>
+        </button>
+      </div>
+    </section>
+    <!-- CATEGORÍAS -->
+    <section id="productos-categorias" class="w-full flex flex-col items-start pt-6 gap-6 bg-[#E0CD95] shadow-md px-12">
+      <h3 class="font-['Amaranth'] text-2xl">
+        Compra por nuestras categorías
+      </h3>
+      <div class="contenedor">
+        <img src="" alt="">
+
+      </div>
+    </section>
+
   </main>
+  <footer class="bg-[#733702]">jodsaas</footer>
+  <script src="js/main-js/carouse.js"></script>
 </body>
 
 </html>
