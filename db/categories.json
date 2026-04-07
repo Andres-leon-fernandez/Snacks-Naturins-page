@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "nombre": "Chips de Camote",
+    "imagen": "img/FOTOS_GRUPALES/camote.webp",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "nombre": "Camote Mix",
+    "imagen": "img/FOTOS_GRUPALES/camote-v2.webp",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "nombre": "Chicharrones",
+    "imagen": "img/FOTOS_GRUPALES/chicharrones.webp",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "nombre": "Chifle Grupal",
+    "imagen": "img/FOTOS_GRUPALES/chifle-grupal.webp",
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "nombre": "Habas Tostadas",
+    "imagen": "img/FOTOS_GRUPALES/haba.webp",
+    "link": "#"
+  },
+  {
+    "id": 6,
+    "nombre": "Maíces",
+    "imagen": "img/FOTOS_GRUPALES/maices.webp",
+    "link": "#"
+  },
+  {
+    "id": 7,
+    "nombre": "Maníes",
+    "imagen": "img/FOTOS_GRUPALES/manis.webp",
+    "link": "#"
+  },
+  {
+    "id": 8,
+    "nombre": "Mix Piqueo",
+    "imagen": "img/FOTOS_GRUPALES/mix-piqueo.webp",
+    "link": "#"
+  },
+  {
+    "id": 9,
+    "nombre": "Papa Hilo",
+    "imagen": "img/FOTOS_GRUPALES/papa-hilo.webp",
+    "link": "#"
+  },
+  {
+    "id": 10,
+    "nombre": "Papas Canaladas",
+    "imagen": "img/FOTOS_GRUPALES/papas-canaladas.webp",
+    "link": "#"
+  },
+  {
+    "id": 11,
+    "nombre": "Papas Hoja",
+    "imagen": "img/FOTOS_GRUPALES/papas-hoja.webp",
+    "link": "#"
+  }
+]

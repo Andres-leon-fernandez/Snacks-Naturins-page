@@ -16,4 +16,9 @@ function prevSlide() {
   updateSlide();
 }
 
+function goToSlide(num) {
+  index = (num + totalSlides) % totalSlides;
+  updateSlide();
+}
+
 setInterval(nextSlide, 5000);
