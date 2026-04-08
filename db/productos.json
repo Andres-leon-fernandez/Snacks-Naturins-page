@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "nombre": "Camote Frito",
+    "imagen": "img/FOTOS_INDIVIDUALES/camote.webp",
+    "precio": 5.0,
+    "rating": 4.8,
+    "categoriaId": 1
+  },
+  {
+    "id": 2,
+    "nombre": "Chicharrón de Chancho",
+    "imagen": "img/FOTOS_INDIVIDUALES/chicharron-de-chancho.webp",
+    "precio": 6.0,
+    "rating": 5.0,
+    "categoriaId": 2
+  },
+  {
+    "id": 3,
+    "nombre": "Chicharrón de Soya",
+    "imagen": "img/FOTOS_INDIVIDUALES/chicharron-de-soya.webp",
+    "precio": 4.5,
+    "rating": 4.6,
+    "categoriaId": 2
+  },
+  {
+    "id": 4,
+    "nombre": "Chicharrón Mixtura",
+    "imagen": "img/FOTOS_INDIVIDUALES/chicharron-mixtura.webp",
+    "precio": 6.5,
+    "rating": 4.7,
+    "categoriaId": 2
+  },
+  {
+    "id": 5,
+    "nombre": "Chicharrón Tocineta",
+    "imagen": "img/FOTOS_INDIVIDUALES/chicharron-tocineta.webp",
+    "precio": 6.0,
+    "rating": 4.8,
+    "categoriaId": 2
+  },
+  {
+    "id": 6,
+    "nombre": "Chifle Acevichado",
+    "imagen": "img/FOTOS_INDIVIDUALES/chifle-acevichado.webp",
+    "precio": 5.0,
+    "rating": 4.9,
+    "categoriaId": 3
+  },
+  {
+    "id": 7,
+    "nombre": "Chifle Dulce",
+    "imagen": "img/FOTOS_INDIVIDUALES/chifle-dulce.webp",
+    "precio": 5.0,
+    "rating": 4.8,
+    "categoriaId": 3
+  },
+  {
+    "id": 8,
+    "nombre": "Chifle Lengua",
+    "imagen": "img/FOTOS_INDIVIDUALES/chifle-lengua.webp",
+    "precio": 5.0,
+    "rating": 4.7,
+    "categoriaId": 3
+  },
+  {
+    "id": 9,
+    "nombre": "Chifle Picante",
+    "imagen": "img/FOTOS_INDIVIDUALES/chifle-picante.webp",
+    "precio": 5.0,
+    "rating": 5.0,
+    "categoriaId": 3
+  },
+  {
+    "id": 10,
+    "nombre": "Chifle Redondo Salado",
+    "imagen": "img/FOTOS_INDIVIDUALES/chifle-redondo-salado.webp",
+    "precio": 5.0,
+    "rating": 4.7,
+    "categoriaId": 3
+  },
+  {
+    "id": 11,
+    "nombre": "Chulpi",
+    "imagen": "img/FOTOS_INDIVIDUALES/chulpi.webp",
+    "precio": 4.0,
+    "rating": 4.6,
+    "categoriaId": 5
+  },
+  {
+    "id": 12,
+    "nombre": "Habas Fritas",
+    "imagen": "img/FOTOS_INDIVIDUALES/habas.webp",
+    "precio": 4.0,
+    "rating": 4.7,
+    "categoriaId": 4
+  },
+  {
+    "id": 13,
+    "nombre": "Maíz Tostado",
+    "imagen": "img/FOTOS_INDIVIDUALES/maiz.webp",
+    "precio": 4.0,
+    "rating": 4.8,
+    "categoriaId": 5
+  },
+  {
+    "id": 14,
+    "nombre": "Maní Confitado",
+    "imagen": "img/FOTOS_INDIVIDUALES/mani-confitado.webp",
+    "precio": 4.0,
+    "rating": 4.8,
+    "categoriaId": 6
+  },
+  {
+    "id": 15,
+    "nombre": "Maní Horneado",
+    "imagen": "img/FOTOS_INDIVIDUALES/mani-horneado.webp",
+    "precio": 4.0,
+    "rating": 4.7,
+    "categoriaId": 6
+  },
+  {
+    "id": 16,
+    "nombre": "Maní Salado",
+    "imagen": "img/FOTOS_INDIVIDUALES/mani-salado.webp",
+    "precio": 4.0,
+    "rating": 4.9,
+    "categoriaId": 6
+  },
+  {
+    "id": 17,
+    "nombre": "Mix Piqueo",
+    "imagen": "img/FOTOS_INDIVIDUALES/mix-piqueo.webp",
+    "precio": 6.0,
+    "rating": 5.0,
+    "categoriaId": 7
+  },
+  {
+    "id": 18,
+    "nombre": "Papa Canalada Orégano",
+    "imagen": "img/FOTOS_INDIVIDUALES/papa-canalada-oregano.webp",
+    "precio": 5.0,
+    "rating": 4.8,
+    "categoriaId": 9
+  },
+  {
+    "id": 19,
+    "nombre": "Papa Canalada Picante",
+    "imagen": "img/FOTOS_INDIVIDUALES/papa-canalada-picante.webp",
+    "precio": 5.0,
+    "rating": 4.7,
+    "categoriaId": 9
+  },
+  {
+    "id": 20,
+    "nombre": "Papa Canalada Salada",
+    "imagen": "img/FOTOS_INDIVIDUALES/papa-canalada-salada.webp",
+    "precio": 5.0,
+    "rating": 4.7,
+    "categoriaId": 9
+  },
+  {
+    "id": 21,
+    "nombre": "Papa Hilo",
+    "imagen": "img/FOTOS_INDIVIDUALES/papa-hilo.webp",
+    "precio": 4.5,
+    "rating": 4.9,
+    "categoriaId": 8
+  },
+  {
+    "id": 22,
+    "nombre": "Papa Hoja Orégano",
+    "imagen": "img/FOTOS_INDIVIDUALES/papa-hoja-oregano.webp",
+    "precio": 5.0,
+    "rating": 4.8,
+    "categoriaId": 10
+  },
+  {
+    "id": 23,
+    "nombre": "Papa Hoja Picante",
+    "imagen": "img/FOTOS_INDIVIDUALES/papa-hoja-picante.webp",
+    "precio": 5.0,
+    "rating": 4.7,
+    "categoriaId": 10
+  },
+  {
+    "id": 24,
+    "nombre": "Papa Hoja Salada",
+    "imagen": "img/FOTOS_INDIVIDUALES/papa-hoja-salada.webp",
+    "precio": 5.0,
+    "rating": 4.9,
+    "categoriaId": 10
+  }
+]
