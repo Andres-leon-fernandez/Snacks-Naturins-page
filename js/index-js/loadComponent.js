@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  loadComponent("footer", "/js/component/footer.html");
-  loadComponent("header", "/js/component/header.html");
+  loadComponent("footer", "js/component/footer.html");
+  loadComponent("header", "js/component/header.html");
 });
 
 function loadComponent(id, path) {
