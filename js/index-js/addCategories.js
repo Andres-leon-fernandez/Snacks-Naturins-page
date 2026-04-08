@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 🔹 Cargar JSON
-  fetch("../db/categories.json")
+  fetch("db/categories.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("No se pudo cargar el JSON de categorías.");
