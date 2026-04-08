@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => {
       console.error("Error al cargar categorías:", error);
-      contenedor.innerHTML =
-        "<p style='color:red;'>No se pudieron cargar las categorías 😢</p>";
+      contenedor.innerHTML = `<p color="text-gray-700" >No se pudieron cargar las categorías</p>`;
     });
 });
