@@ -4,51 +4,72 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function crearCard(pro) {
     const item = document.createElement("div");
+    const categoriaNombre = pro.categoriaNombre || pro.categoria;
+    const descripcion =
+      pro.descripcion ||
+      "Delicioso snack artesanal, preparado con los mejores ingredientes naturales.";
 
     item.className =
-      "group relative bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300";
+      "bg-white rounded-[2rem] shadow-xl overflow-hidden hover:shadow-2xl transition duration-300";
 
     item.innerHTML = `
-      <!-- Imagen -->
-      <div class="relative w-full aspect-[4/3] overflow-hidden">
-        <img 
-          src="${pro.imagen}" 
-          alt="${pro.nombre}"
-          loading="lazy"
-          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          onerror="this.src='img/fallback.webp'"
-        >
+                <!-- Imagen -->
+                <div class="relative w-full aspect-[4/3] overflow-hidden">
+                    <img src="${pro.imagen}"
+                        alt="${pro.nombre}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
 
-        <!-- Favorito -->
-        <button class="absolute top-2 right-2 bg-white/80 backdrop-blur p-2 rounded-full shadow hover:bg-red-50 hover:text-red-500 transition">
-          ♡
-        </button>
-      </div>
+                    <!-- Favorito -->
+                    <button
+                        class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-sm hover:bg-orange-50 transition">
+                        ☆
+                    </button>
+                </div>
 
-      <!-- Info -->
-      <div class="p-4 relative">
+                <!-- Info -->
+                <div class="p-5">
+                    <div class="flex items-start justify-between gap-3">
+                        <span class="inline-flex items-center rounded-full bg-orange-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-600">
+                            ${categoriaNombre}
+                        </span>
+                        <span class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-white">
+                            ${pro.rating.toFixed(1)}
+                        </span>
+                    </div>
 
-        <h2 class="text-sm font-['Inter'] font-semibold text-gray-800 truncate">
-          ${pro.nombre}
-        </h2>
+                    <h2 class="mt-4 text-xl font-semibold leading-tight text-slate-900">
+                        ${pro.nombre}
+                    </h2>
 
-        <div class="flex items-center gap-1 mt-1">
-          <span class="text-xs text-amber-500">★★★★★</span>
-          <span class="text-xs text-gray-400">(${pro.rating})</span>
-        </div>
+                    <p class="text-sm text-slate-500 mt-3 line-clamp-3">
+                        ${descripcion}
+                    </p>
 
-        <p class="text-green-700 font-bold mt-2 text-lg">
-          S/ ${pro.precio.toFixed(2)}
-        </p>
+                    <div class="mt-5 flex items-center justify-between gap-4">
+                        <div>
+                            <p class="text-sm text-slate-500">Precio</p>
+                            <p class="text-2xl font-bold text-slate-900">S/ ${pro.precio.toFixed(2)}</p>
+                        </div>
 
-        <!-- Botón -->
-        <button 
-          onclick="agregarCarrito('${pro.nombre}', ${pro.precio})"
-          class="mt-3 w-full bg-green-700 cursor-pointer hover:bg-green-800 text-white font-['Inter'] py-2 rounded-xl text-sm font-semibold shadow active:scale-95 transition"
-        >
-          Añadir al carrito
-        </button>
-      </div>
+                        <!-- Botón de acción -->
+                        <!-- Cambiar la dirreccion de el href para cada uno -->
+
+                        <a href="index.html" class=" group inline-flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg shadow-orange-500/20 transition cursor-pointer hover:bg-orange-600">
+                            <!-- Icono (+) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:hidden" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+
+                            <!-- Icono carrito -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden group-hover:block" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M10 21a1 1 0 100-2 1 1 0 000 2zm7 0a1 1 0 100-2 1 1 0 000 2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
     `;
 
     return item;
@@ -72,14 +93,30 @@ document.addEventListener("DOMContentLoaded", () => {
     contenedor.appendChild(fragment);
   }
 
-  fetch("db/productos.json")
-    .then((res) => {
+  Promise.all([
+    fetch("db/productos.json").then((res) => {
       if (!res.ok) throw new Error("Error al cargar productos");
       return res.json();
+    }),
+    fetch("db/categories.json").then((res) => {
+      if (!res.ok) throw new Error("Error al cargar categorías");
+      return res.json();
+    }),
+  ])
+    .then(([productos, categorias]) => {
+      const categoriasMap = Object.fromEntries(
+        categorias.map((cat) => [cat.id, cat.nombre]),
+      );
+
+      const productosConCategoria = productos.map((pro) => ({
+        ...pro,
+        categoriaNombre: categoriasMap[pro.categoria] || "Sin categoría",
+      }));
+
+      renderizarProductos(productosConCategoria);
     })
-    .then(renderizarProductos)
     .catch(() => {
       contenedor.innerHTML =
-        "<p class='text-center col-span-full text-red-500'>Error al cargar productos</p>";
+        "<p class='text-center col-span-full text-red-500'>Error al cargar productos o categorías</p>";
     });
 });

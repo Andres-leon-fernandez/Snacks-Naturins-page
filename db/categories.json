@@ -3,60 +3,70 @@
     "id": 1,
     "nombre": "Chips de Camote",
     "imagen": "img/FOTOS_GRUPALES/camote.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Chips hechos con camote fresco y tostado, dulces y crujientes."
   },
   {
     "id": 2,
     "nombre": "Chicharrones",
     "imagen": "img/FOTOS_GRUPALES/chicharrones.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Snacks de chicharrón dorado con sabor tradicional y crocante."
   },
   {
     "id": 3,
     "nombre": "Chifle Grupal",
     "imagen": "img/FOTOS_GRUPALES/chifle-grupal.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Bolsas grandes de chifle para compartir con familia o amigos."
   },
   {
     "id": 4,
     "nombre": "Habas Tostadas",
     "imagen": "img/FOTOS_GRUPALES/haba.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Habas tostadas crocantes, perfectas para un snack ligero."
   },
   {
     "id": 5,
     "nombre": "Maíces",
     "imagen": "img/FOTOS_GRUPALES/maices.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Variedad de snacks a base de maíz con sabores frescos."
   },
   {
     "id": 6,
     "nombre": "Maníes",
     "imagen": "img/FOTOS_GRUPALES/manis.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Snacks de maní con distintas texturas y sazones."
   },
   {
     "id": 7,
     "nombre": "Mix Piqueo",
     "imagen": "img/FOTOS_GRUPALES/mix-piqueo.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Mezcla de snacks variados para picar y disfrutar juntos."
   },
   {
     "id": 8,
     "nombre": "Papa Hilo",
     "imagen": "img/FOTOS_GRUPALES/papa-hilo.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Papas hilo finas y crujientes, con sabor ligero."
   },
   {
     "id": 9,
     "nombre": "Papas Canaladas",
     "imagen": "img/FOTOS_GRUPALES/papas-canaladas.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Papas canaladas con sabor intenso y textura crujiente."
   },
   {
     "id": 10,
     "nombre": "Papas Hoja",
     "imagen": "img/FOTOS_GRUPALES/papas-hoja.webp",
-    "link": "#"
+    "link": "#",
+    "descripcion": "Papas hoja ligeras y crujientes, perfectas para compartir."
   }
 ]
