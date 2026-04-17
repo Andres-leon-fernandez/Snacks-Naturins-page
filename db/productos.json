@@ -5,7 +5,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/camote.webp",
     "precio": 5.0,
     "rating": 4.8,
-    "categoriaId": 1
+    "categoria": 1,
+    "descripcion": "Camote frito crujiente con un toque dulce y salado."
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chicharron-de-chancho.webp",
     "precio": 6.0,
     "rating": 5.0,
-    "categoriaId": 2
+    "categoria": 2,
+    "descripcion": "Chicharrón clásico de chancho, dorado y crocante."
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chicharron-de-soya.webp",
     "precio": 4.5,
     "rating": 4.6,
-    "categoriaId": 2
+    "categoria": 2,
+    "descripcion": "Chicharrón vegetal de soya con sazón tradicional."
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chicharron-mixtura.webp",
     "precio": 6.5,
     "rating": 4.7,
-    "categoriaId": 2
+    "categoria": 2,
+    "descripcion": "Mezcla de chicharrones variados con sabor casero."
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chicharron-tocineta.webp",
     "precio": 6.0,
     "rating": 4.8,
-    "categoriaId": 2
+    "categoria": 2,
+    "descripcion": "Trozos de tocineta frita, crujientes y sabrosos."
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chifle-acevichado.webp",
     "precio": 5.0,
     "rating": 4.9,
-    "categoriaId": 3
+    "categoria": 3,
+    "descripcion": "Chifle con sabor a ají y limón, ideal para acompañar."
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chifle-dulce.webp",
     "precio": 5.0,
     "rating": 4.8,
-    "categoriaId": 3
+    "categoria": 3,
+    "descripcion": "Chifle dulce, suave y crocante, perfecto para antojos."
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chifle-lengua.webp",
     "precio": 5.0,
     "rating": 4.7,
-    "categoriaId": 3
+    "categoria": 3,
+    "descripcion": "Chifle con sabor a lengua salada y textura ligera."
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chifle-picante.webp",
     "precio": 5.0,
     "rating": 5.0,
-    "categoriaId": 3
+    "categoria": 3,
+    "descripcion": "Chifle con un toque picante para los que buscan sabor fuerte."
   },
   {
     "id": 10,
@@ -77,7 +86,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chifle-redondo-salado.webp",
     "precio": 5.0,
     "rating": 4.7,
-    "categoriaId": 3
+    "categoria": 3,
+    "descripcion": "Chifle redondo y salado, ideal para picar entre amigos."
   },
   {
     "id": 11,
@@ -85,7 +95,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/chulpi.webp",
     "precio": 4.0,
     "rating": 4.6,
-    "categoriaId": 5
+    "categoria": 5,
+    "descripcion": "Maíz tostado crocante con sabor tradicional."
   },
   {
     "id": 12,
@@ -93,7 +104,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/habas.webp",
     "precio": 4.0,
     "rating": 4.7,
-    "categoriaId": 4
+    "categoria": 4,
+    "descripcion": "Habas fritas crujientes con sabor natural y tostado."
   },
   {
     "id": 13,
@@ -101,7 +113,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/maiz.webp",
     "precio": 4.0,
     "rating": 4.8,
-    "categoriaId": 5
+    "categoria": 5,
+    "descripcion": "Maíz tostado crujiente, listo para disfrutar."
   },
   {
     "id": 14,
@@ -109,7 +122,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/mani-confitado.webp",
     "precio": 4.0,
     "rating": 4.8,
-    "categoriaId": 6
+    "categoria": 6,
+    "descripcion": "Maní dulce y crujiente con cobertura caramelizada."
   },
   {
     "id": 15,
@@ -117,7 +131,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/mani-horneado.webp",
     "precio": 4.0,
     "rating": 4.7,
-    "categoriaId": 6
+    "categoria": 6,
+    "descripcion": "Maní horneado con textura suave y sabor tostado."
   },
   {
     "id": 16,
@@ -125,7 +140,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/mani-salado.webp",
     "precio": 4.0,
     "rating": 4.9,
-    "categoriaId": 6
+    "categoria": 6,
+    "descripcion": "Maní salado con sazón justa para un snack rápido."
   },
   {
     "id": 17,
@@ -133,7 +149,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/mix-piqueo.webp",
     "precio": 6.0,
     "rating": 5.0,
-    "categoriaId": 7
+    "categoria": 7,
+    "descripcion": "Selección de snacks variados para picar entre amigos."
   },
   {
     "id": 18,
@@ -141,7 +158,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/papa-canalada-oregano.webp",
     "precio": 5.0,
     "rating": 4.8,
-    "categoriaId": 9
+    "categoria": 9,
+    "descripcion": "Papas canaladas con aroma fresco a orégano."
   },
   {
     "id": 19,
@@ -149,7 +167,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/papa-canalada-picante.webp",
     "precio": 5.0,
     "rating": 4.7,
-    "categoriaId": 9
+    "categoria": 9,
+    "descripcion": "Papas canaladas con un toque picante delicioso."
   },
   {
     "id": 20,
@@ -157,7 +176,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/papa-canalada-salada.webp",
     "precio": 5.0,
     "rating": 4.7,
-    "categoriaId": 9
+    "categoria": 9,
+    "descripcion": "Papas canaladas clásicas y saladas, muy crujientes."
   },
   {
     "id": 21,
@@ -165,7 +185,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/papa-hilo.webp",
     "precio": 4.5,
     "rating": 4.9,
-    "categoriaId": 8
+    "categoria": 8,
+    "descripcion": "Papas hilo finas y crocantes, perfectas para picar."
   },
   {
     "id": 22,
@@ -173,7 +194,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/papa-hoja-oregano.webp",
     "precio": 5.0,
     "rating": 4.8,
-    "categoriaId": 10
+    "categoria": 10,
+    "descripcion": "Papas hoja con sabor suave a orégano fresco."
   },
   {
     "id": 23,
@@ -181,7 +203,8 @@
     "imagen": "img/FOTOS_INDIVIDUALES/papa-hoja-picante.webp",
     "precio": 5.0,
     "rating": 4.7,
-    "categoriaId": 10
+    "categoria": 10,
+    "descripcion": "Papas hoja con chispa picante y mucha textura."
   },
   {
     "id": 24,
@@ -189,6 +212,7 @@
     "imagen": "img/FOTOS_INDIVIDUALES/papa-hoja-salada.webp",
     "precio": 5.0,
     "rating": 4.9,
-    "categoriaId": 10
+    "categoria": 10,
+    "descripcion": "Papas hoja suaves, crujientes y con sazón clásica."
   }
 ]
