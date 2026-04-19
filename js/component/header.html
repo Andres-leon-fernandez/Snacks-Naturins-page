@@ -3,10 +3,13 @@
   <a href="index.html">
     <img src="img/Naturins-logo.svg" alt="Naturin's" class="h-[42px] w-auto" />
   </a>
+
   <div
     class="flex items-center border-[1.5px] border-[#e0d0c0] rounded-full overflow-hidden focus-within:border-[#F1860B] focus-within:ring-2 focus-within:ring-[#F1860B]/20 transition">
+
     <input type="text" placeholder="Buscar productos…"
       class="px-4 py-2 text-sm outline-none w-48 bg-transparent text-[#2c1a00]" />
+
     <button
       class="px-4 py-2 bg-[#98C01E] hover:bg-[#E52619] text-white text-sm font-semibold transition cursor-pointer">
       Buscar
@@ -19,31 +22,93 @@
   <ul class="flex items-center gap-6 font-['Inter'] text-gray-700">
     <li>
       <a href="Productos.html"
-        class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Productos</a>
+        class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all">
+        Productos
+      </a>
     </li>
+
     <li>
       <a href="Nosotros.html"
-        class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Nosotros</a>
+        class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all">
+        Nosotros
+      </a>
     </li>
+
     <li>
       <a href="blog.html"
-        class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Blog</a>
+        class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all">
+        Blog
+      </a>
     </li>
+
     <li>
       <a href="Contacto.html"
-        class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all focus:after:w-full">Contacto</a>
+        class="text-lg relative hover:text-[#E52619] transition after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#F1860B] hover:after:w-full after:transition-all">
+        Contacto
+      </a>
     </li>
   </ul>
 </nav>
 
 <!-- Acciones -->
 <div class="flex items-center gap-3">
-  <a href="#"
-    class="flex items-center gap-2 text-sm font-semibold text-[#733702] px-3 py-2 rounded-lg hover:bg-[#733702]/8 transition">
-    <i class="fa-solid fa-cart-shopping"></i> Carrito
-  </a>
+
+  <!-- CARRITO -->
+  <div class="relative">
+
+    <!-- BOTÓN -->
+    <button id="btn-carrito"
+      class="flex items-center gap-2 text-sm font-semibold text-[#733702] px-3 py-2 rounded-lg hover:bg-[#733702]/8 transition">
+
+      <i class="fa-solid fa-cart-shopping"></i>
+      Carrito
+
+      <!-- CONTADOR -->
+      <span id="contador-carrito"
+        class="ml-1 bg-[#E52619] text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+        0
+      </span>
+    </button>
+
+    <!-- MINI CARRITO -->
+    <div id="mini-carrito"
+      class="hidden absolute right-0 mt-3 w-89 h-[500px] bg-white rounded-xl shadow-2xl p-4 z-50 border flex flex-col overflow-hidden">
+
+      <h3 class="font-bold mb-3 text-[#733702]">Carrito de Compra</h3>
+
+      <!-- ITEMS -->
+      <div id="mini-items" class="space-y-3 max-h-60 overflow-y-auto"></div>
+
+      <div class="border-t mt-3 pt-3 text-sm">
+      </div>
+
+      <!-- BOTÓN -->
+
+      <div id="mini-footer" class="mt-auto pt-3 border-t space-y-2">
+        <div class="text-sm">
+        Total: <span id="mini-total" class="font-bold">S/ 0.00</span>
+       </div>
+
+        <button id="btn-finalizar-mini"
+          class="w-full bg-[#1a4731] text-white py-2 rounded-lg hover:bg-[#245e41] transition text-sm font-semibold">
+          Finalizar compra
+        </button>
+
+        <a href="Carrito.html"
+          class="block w-full text-center bg-[#E52619] text-white py-2 rounded-lg hover:bg-red-700 transition text-sm font-semibold">
+          Ver carrito completo
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- LOGIN -->
   <a href="#"
     class="text-sm font-semibold text-[#E52619] border-[1.5px] border-[#E52619] rounded-full px-4 py-2 hover:bg-[#E52619] hover:text-white transition">
     Iniciar sesión
   </a>
+
 </div>
