@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <!-- Botón de acción (carrito) -->
 
-                        <a href="carrito.html"
+                        <a href="Carrito.html"
                           class="btn-carrito group inline-flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition transform hover:scale-110 active:scale-95"
                           data-id="${pro.id}">
   
