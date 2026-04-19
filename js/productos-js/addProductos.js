@@ -50,10 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
                             <p class="text-2xl font-bold text-slate-900">S/ ${pro.precio.toFixed(2)}</p>
                         </div>
 
-                        <!-- Botón de acción -->
-                        <!-- Cambiar la dirreccion de el href para cada uno -->
+                        <!-- Botón de acción (carrito) -->
 
-                        <a href="index.html" class=" group inline-flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg shadow-orange-500/20 transition cursor-pointer hover:bg-orange-600">
+                        <a href="carrito.html"
+                          class="btn-carrito group inline-flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition transform hover:scale-110 active:scale-95"
+                          data-id="${pro.id}">
+  
+
                             <!-- Icono (+) -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:hidden" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
@@ -114,9 +117,98 @@ document.addEventListener("DOMContentLoaded", () => {
       }));
 
       renderizarProductos(productosConCategoria);
+
+      // EVENTO CLICK 
+      document.querySelectorAll(".btn-carrito").forEach((btn) => {
+        btn.addEventListener("click", () => {
+
+          // 🔥 animación botón
+        btn.classList.add("scale-125");
+        setTimeout(() => {
+        btn.classList.remove("scale-125");
+        }, 150);
+
+          const id = btn.dataset.id;
+          const producto = productosConCategoria.find(p => p.id == id);
+          agregarAlCarrito(producto);
+        });
+      });
     })
     .catch(() => {
       contenedor.innerHTML =
         "<p class='text-center col-span-full text-red-500'>Error al cargar productos o categorías</p>";
     });
 });
+
+function agregarAlCarrito(producto) {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  const existe = carrito.find(item => item.id === producto.id);
+
+  if (existe) {
+    existe.cantidad += 1;
+  } else {
+    carrito.push({
+      id: producto.id,
+      nombre: producto.nombre,
+      precio: producto.precio,
+      imagen: producto.imagen,
+      cantidad: 1
+    });
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  // 🔥 ACTUALIZAR CONTADOR (forzado seguro)
+  setTimeout(() => {
+    if (typeof actualizarContador === "function") {
+      actualizarContador();
+      animarContador();
+    }
+  }, 50);
+
+  // 🔥 feedback visual
+  mostrarToast("Producto agregado al carrito");
+
+  // 🔥 abrir mini carrito automáticamente
+  const mini = document.getElementById("mini-carrito");
+  if (mini) {
+    mini.classList.remove("hidden");
+    renderMiniCarrito();
+  }
+}
+
+// 🔔 TOAST BONITO
+function mostrarToast(mensaje) {
+  const toast = document.createElement("div");
+
+  toast.className = `
+    fixed bottom-6 right-6 bg-[#1a4731] text-white px-5 py-3 rounded-xl shadow-lg 
+    opacity-0 translate-y-5 transition-all duration-300 z-50
+  `;
+
+  toast.textContent = mensaje;
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.remove("opacity-0", "translate-y-5");
+  }, 10);
+
+  setTimeout(() => {
+    toast.classList.add("opacity-0", "translate-y-5");
+    setTimeout(() => toast.remove(), 300);
+  }, 2000);
+}
+
+// 🔴 ANIMACIÓN CONTADOR
+function animarContador() {
+  const contador = document.getElementById("contador-carrito");
+  if (!contador) return;
+
+  contador.classList.add("scale-125");
+
+  setTimeout(() => {
+    contador.classList.remove("scale-125");
+  }, 200);
+}
