@@ -10,9 +10,7 @@ function loadComponent(id, path, callback) {
       document.getElementById(id).innerHTML = data;
       if (callback) callback();
     })
-    .catch((err) =>
-      console.error("Error al cargar el componente:", id, err)
-    );
+    .catch((err) => console.error("Error al cargar el componente:", id, err));
 }
 
 function initHeader() {
@@ -22,7 +20,7 @@ function initHeader() {
   if (!btn || !mini) return;
 
   actualizarContador();
-  
+
   btn.addEventListener("click", () => {
     mini.classList.toggle("hidden");
     renderMiniCarrito();
@@ -61,7 +59,7 @@ function renderMiniCarrito() {
           Agrega productos para continuar
         </p>
 
-        <a href="Productos.html"
+        <a href="productos.html"
           class="bg-[#E52619] hover:bg-red-700 text-white text-sm px-4 py-2 rounded-lg font-semibold no-underline">
           Volver a la tienda
         </a>

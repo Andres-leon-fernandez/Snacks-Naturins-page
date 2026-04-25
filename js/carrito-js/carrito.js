@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const envioSelect = document.getElementById("envio");
   const cuponInput = document.getElementById("cupon");
 
-
   let descuento = 0;
 
   function obtenerCarrito() {
@@ -20,27 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderCarrito() {
-  const carrito = obtenerCarrito();
-  contenedor.innerHTML = "";
+    const carrito = obtenerCarrito();
+    contenedor.innerHTML = "";
 
-  const acciones = document.getElementById("acciones-carrito");
-  const wrapper = document.getElementById("carrito-wrapper");
-  const resumen = document.getElementById("resumen-compra");
-  
+    const acciones = document.getElementById("acciones-carrito");
+    const wrapper = document.getElementById("carrito-wrapper");
+    const resumen = document.getElementById("resumen-compra");
 
-  if (carrito.length === 0) {
+    if (carrito.length === 0) {
+      // 🔴 OCULTAR ELEMENTOS DE ACCIÓN Y RESUMEN
+      acciones.classList.add("hidden");
+      resumen.classList.add("hidden");
 
-    // 🔴 OCULTAR ELEMENTOS DE ACCIÓN Y RESUMEN
-    acciones.classList.add("hidden");
-    resumen.classList.add("hidden");
+      const layout = document.getElementById("layout-carrito");
 
-    const layout = document.getElementById("layout-carrito");
+      // 🔴 CENTRAR CONTENIDO (IMPORTANTE: reset completo de layout)
+      layout.className =
+        "flex flex-col items-center justify-center min-h-[60vh]";
 
-    // 🔴 CENTRAR CONTENIDO (IMPORTANTE: reset completo de layout)
-    layout.className = "flex flex-col items-center justify-center min-h-[60vh]";
-
-    //parte cuando no hay ni un producto seleccionado
-   contenedor.innerHTML = `
+      //parte cuando no hay ni un producto seleccionado
+      contenedor.innerHTML = `
   <div class="flex flex-col items-center justify-center text-center w-full py-24">
 
     <div class="relative mb-6">
@@ -59,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Antes de finalizar tu compra, necesitas agregar productos desde la tienda.
     </p>
 
-    <a href="Productos.html"
+    <a href="productos.html"
       class="bg-[#98C01E] hover:bg-[#E52619] text-white px-8 py-4 rounded-xl font-semibold text-lg transition shadow-lg">
       Volver a la tienda
     </a>
@@ -67,23 +65,23 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 `;
 
-    actualizarTotales();
-    return;
-  }
+      actualizarTotales();
+      return;
+    }
 
-  // 🟢 CON PRODUCTOS
-  acciones.classList.remove("hidden");
-  resumen.classList.remove("hidden");
+    // 🟢 CON PRODUCTOS
+    acciones.classList.remove("hidden");
+    resumen.classList.remove("hidden");
 
-  wrapper.className = "min-h-[60vh] flex flex-col w-full";
+    wrapper.className = "min-h-[60vh] flex flex-col w-full";
 
-  carrito.forEach((p) => {
-    const item = document.createElement("div");
+    carrito.forEach((p) => {
+      const item = document.createElement("div");
 
-  item.className =
-"flex justify-between items-center bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition w-full border border-gray-100";
+      item.className =
+        "flex justify-between items-center bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition w-full border border-gray-100";
 
-    item.innerHTML = `
+      item.innerHTML = `
       <div class="flex items-center gap-4">
   <img src="${p.imagen}" class="w-24 h-24 object-cover rounded-xl border">
 
@@ -108,23 +106,23 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
 
-    contenedor.appendChild(item);
-  });
+      contenedor.appendChild(item);
+    });
 
-  eventos();
-  actualizarTotales();
-}
+    eventos();
+    actualizarTotales();
+  }
 
   function eventos() {
-    document.querySelectorAll(".sumar").forEach(btn => {
+    document.querySelectorAll(".sumar").forEach((btn) => {
       btn.onclick = () => cambiarCantidad(btn.dataset.id, 1);
     });
 
-    document.querySelectorAll(".restar").forEach(btn => {
+    document.querySelectorAll(".restar").forEach((btn) => {
       btn.onclick = () => cambiarCantidad(btn.dataset.id, -1);
     });
 
-    document.querySelectorAll(".eliminar").forEach(btn => {
+    document.querySelectorAll(".eliminar").forEach((btn) => {
       btn.onclick = () => eliminarProducto(btn.dataset.id);
     });
   }
@@ -132,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function cambiarCantidad(id, cambio) {
     let carrito = obtenerCarrito();
 
-    carrito = carrito.map(p => {
+    carrito = carrito.map((p) => {
       if (p.id == id) {
         p.cantidad += cambio;
         if (p.cantidad < 1) p.cantidad = 1;
@@ -145,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function eliminarProducto(id) {
-    let carrito = obtenerCarrito().filter(p => p.id != id);
+    let carrito = obtenerCarrito().filter((p) => p.id != id);
     guardarCarrito(carrito);
     renderCarrito();
   }
@@ -177,11 +175,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (codigo === "descuento10") {
       descuento = 10;
-    }
-    else if (codigo === "enviogratis") {
+    } else if (codigo === "enviogratis") {
       envioSelect.value = 0;
-    }
-    else if (codigo !== "") {
+    } else if (codigo !== "") {
       alert("Cupón inválido");
     }
 
@@ -189,14 +185,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // VACIAR CARRITO
-document.getElementById("vaciar-carrito").addEventListener("click", () => {
-  mostrarConfirmacion("¿Seguro que deseas vaciar el carrito?", () => {
-    localStorage.removeItem("carrito");
-    renderCarrito();
+  document.getElementById("vaciar-carrito").addEventListener("click", () => {
+    mostrarConfirmacion("¿Seguro que deseas vaciar el carrito?", () => {
+      localStorage.removeItem("carrito");
+      renderCarrito();
+    });
   });
-});
 
-renderCarrito();
+  renderCarrito();
 });
 
 function mostrarConfirmacion(mensaje, onConfirm) {

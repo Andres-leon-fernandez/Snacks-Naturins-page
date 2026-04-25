@@ -3,133 +3,132 @@
 
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naturin's – Snacks Naturales del Perú</title>
-    <link rel="icon" href="img/Naturins-logo-mobile.svg" type="image/svg+xml">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naturin's – Snacks Naturales del Perú</title>
+  <link rel="icon" href="img/Naturins-logo-mobile.svg" type="image/svg+xml">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="font-['Inter'] bg-[#FDF6E3] text-[#2c1a00] min-h-screen flex flex-col">
 
-    <!-- ── HEADER ── -->
-    <header id="header"
-        class="sticky top-0 w-full z-50 bg-white/97 backdrop-blur-md border-b-2 border-[#F1860B] h-[70px] flex items-center justify-between px-10 gap-6 shadow-sm">
-    </header>
-    <main class="max-w-7xl mx-auto p-6">
+  <!-- ── HEADER ── -->
+  <header id="header"
+    class="sticky top-0 w-full z-50 bg-white/97 backdrop-blur-md border-b-2 border-[#F1860B] h-[70px] flex items-center justify-between px-10 gap-6 shadow-sm">
+  </header>
+  <main class="max-w-7xl mx-auto p-6">
 
-        <!-- TÍTULO -->
-        <!--<h1 class="text-3xl font-bold text-center mb-6"> -->
-        <!-- Tu carrito -->
-        <!-- </h1> -->
+    <!-- TÍTULO -->
+    <!--<h1 class="text-3xl font-bold text-center mb-6"> -->
+    <!-- Tu carrito -->
+    <!-- </h1> -->
 
-        <!-- GRID PRINCIPAL -->
-        <div id="layout-carrito" class="flex flex-col md:grid md:grid-cols-3 gap-10">
+    <!-- GRID PRINCIPAL -->
+    <div id="layout-carrito" class="flex flex-col md:grid md:grid-cols-3 gap-10">
 
-            <!-- IZQUIERDA -->
-            <div class="md:col-span-2">
+      <!-- IZQUIERDA -->
+      <div class="md:col-span-2">
 
-                <!-- CONTENEDOR IZQUIERDA -->
-                <div id="carrito-wrapper" class="min-h-[30vh] flex flex-col w-full">
+        <!-- CONTENEDOR IZQUIERDA -->
+        <div id="carrito-wrapper" class="min-h-[30vh] flex flex-col w-full">
 
-                    <!-- ACCIONES -->
-                    <div id="acciones-carrito" class="hidden flex justify-between w-full max-w-lg mb-4 mx-auto">
+          <!-- ACCIONES -->
+          <div id="acciones-carrito" class="hidden flex justify-between w-full max-w-lg mb-4 mx-auto">
 
-                        <a id="seguir-comprando" href="Productos.html" class="text-sm text-[#E52619] hover:underline">
-                            ← Seguir comprando
-                        </a>
+            <a id="seguir-comprando" href="productos.html" class="text-sm text-[#E52619] hover:underline">
+              ← Seguir comprando
+            </a>
 
-                        <button id="vaciar-carrito" class="text-sm text-red-500 hover:underline">
-                            Vaciar carrito
-                        </button>
+            <button id="vaciar-carrito" class="text-sm text-red-500 hover:underline">
+              Vaciar carrito
+            </button>
 
-                    </div>
+          </div>
 
-                    <!-- PRODUCTOS O VACÍO -->
-                    <div id="carrito-container" class="w-full max-w-2xl mx-auto"></div>
+          <!-- PRODUCTOS O VACÍO -->
+          <div id="carrito-container" class="w-full max-w-2xl mx-auto"></div>
 
-                </div>
+        </div>
 
+      </div>
+      <!-- DERECHA (RESUMEN) -->
+      <div id="resumen-compra"
+        class="bg-white p-8 rounded-2xl shadow-lg h-fit sticky top-24 border border-gray-100 w-full md:w-[400px]">
+
+        <h2 class="text-xl font-bold mb-4 border-b pb-2">
+          Resumen de compra
+        </h2>
+
+        <div class="space-y-3 text-sm">
+
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span id="subtotal">S/ 0.00</span>
+          </div>
+
+          <!-- ENVÍO -->
+          <div>
+            <label class="text-xs text-gray-500">Envío</label>
+            <select id="envio" class="w-full border rounded-lg p-2 mt-1 text-sm focus:ring-2 focus:ring-[#E52619]">
+              <option value="0">Recojo en tienda (Gratis)</option>
+              <option value="5">Delivery (S/ 5.00)</option>
+            </select>
+          </div>
+
+          <!-- CUPÓN -->
+          <div>
+            <label class="text-xs text-gray-500">Cupón</label>
+            <div class="flex gap-2 mt-1">
+              <input id="cupon" placeholder="Código" class="flex-1 border rounded-lg p-2 text-sm">
+
+              <button id="aplicar-cupon" class="bg-gray-200 px-3 rounded-lg hover:bg-gray-300">
+                OK
+              </button>
             </div>
-            <!-- DERECHA (RESUMEN) -->
-            <div id="resumen-compra"
-                class="bg-white p-8 rounded-2xl shadow-lg h-fit sticky top-24 border border-gray-100 w-full md:w-[400px]">
+          </div>
 
-                <h2 class="text-xl font-bold mb-4 border-b pb-2">
-                    Resumen de compra
-                </h2>
+          <div class="flex justify-between text-green-600">
+            <span>Descuento</span>
+            <span id="descuento">S/ 0.00</span>
+          </div>
 
-                <div class="space-y-3 text-sm">
+          <hr>
 
-                    <div class="flex justify-between">
-                        <span>Subtotal</span>
-                        <span id="subtotal">S/ 0.00</span>
-                    </div>
+          <div class="flex justify-between text-lg font-bold">
+            <span>Total</span>
+            <span id="total">S/ 0.00</span>
+          </div>
 
-                    <!-- ENVÍO -->
-                    <div>
-                        <label class="text-xs text-gray-500">Envío</label>
-                        <select id="envio"
-                            class="w-full border rounded-lg p-2 mt-1 text-sm focus:ring-2 focus:ring-[#E52619]">
-                            <option value="0">Recojo en tienda (Gratis)</option>
-                            <option value="5">Delivery (S/ 5.00)</option>
-                        </select>
-                    </div>
+        </div>
 
-                    <!-- CUPÓN -->
-                    <div>
-                        <label class="text-xs text-gray-500">Cupón</label>
-                        <div class="flex gap-2 mt-1">
-                            <input id="cupon" placeholder="Código" class="flex-1 border rounded-lg p-2 text-sm">
+        <!-- BOTÓN -->
+        <button id="btn-finalizar"
+          class="mt-6 w-full bg-[#E52619] text-white py-3 rounded-xl hover:bg-red-700 transition font-semibold shadow-md">
+          Finalizar compra
+        </button>
 
-                            <button id="aplicar-cupon" class="bg-gray-200 px-3 rounded-lg hover:bg-gray-300">
-                                OK
-                            </button>
-                        </div>
-                    </div>
+        <!-- SEGURIDAD -->
+        <p class="text-xs text-gray-400 mt-3 text-center">
+          🔒 Pago 100% seguro
+        </p>
 
-                    <div class="flex justify-between text-green-600">
-                        <span>Descuento</span>
-                        <span id="descuento">S/ 0.00</span>
-                    </div>
+      </div>
 
-                    <hr>
+  </main>
 
-                    <div class="flex justify-between text-lg font-bold">
-                        <span>Total</span>
-                        <span id="total">S/ 0.00</span>
-                    </div>
+  <!-- ── FOOTER ── -->
+  <footer id="footer" class="bg-[#733702] text-white border-t-4 border-[#F1860B] pt-14 pb-8 px-6"></footer>
 
-                </div>
-
-                <!-- BOTÓN -->
-                <button id="btn-finalizar"
-                    class="mt-6 w-full bg-[#E52619] text-white py-3 rounded-xl hover:bg-red-700 transition font-semibold shadow-md">
-                    Finalizar compra
-                </button>
-
-                <!-- SEGURIDAD -->
-                <p class="text-xs text-gray-400 mt-3 text-center">
-                    🔒 Pago 100% seguro
-                </p>
-
-            </div>
-
-    </main>
-
-    <!-- ── FOOTER ── -->
-    <footer id="footer" class="bg-[#733702] text-white border-t-4 border-[#F1860B] pt-14 pb-8 px-6"></footer>
-
-    <script src="js/carrito-js/carrito.js"></script>
-    <script src="js/index-js/loadComponent.js"></script>
+  <script src="js/carrito-js/carrito.js"></script>
+  <script src="js/index-js/loadComponent.js"></script>
 </body>
 
 </html>
