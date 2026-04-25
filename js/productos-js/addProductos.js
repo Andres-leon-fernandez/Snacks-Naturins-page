@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         <!-- Botón de acción (carrito) -->
 
-                        <a href="Carrito.html"
+                        <a href="carrito.html"
                           class="btn-carrito group inline-flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition transform hover:scale-110 active:scale-95"
                           data-id="${pro.id}">
   
@@ -118,18 +118,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       renderizarProductos(productosConCategoria);
 
-      // EVENTO CLICK 
+      // EVENTO CLICK
       document.querySelectorAll(".btn-carrito").forEach((btn) => {
         btn.addEventListener("click", () => {
-
           // 🔥 animación botón
-        btn.classList.add("scale-125");
-        setTimeout(() => {
-        btn.classList.remove("scale-125");
-        }, 150);
+          btn.classList.add("scale-125");
+          setTimeout(() => {
+            btn.classList.remove("scale-125");
+          }, 150);
 
           const id = btn.dataset.id;
-          const producto = productosConCategoria.find(p => p.id == id);
+          const producto = productosConCategoria.find((p) => p.id == id);
           agregarAlCarrito(producto);
         });
       });
@@ -143,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function agregarAlCarrito(producto) {
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-  const existe = carrito.find(item => item.id === producto.id);
+  const existe = carrito.find((item) => item.id === producto.id);
 
   if (existe) {
     existe.cantidad += 1;
@@ -153,7 +152,7 @@ function agregarAlCarrito(producto) {
       nombre: producto.nombre,
       precio: producto.precio,
       imagen: producto.imagen,
-      cantidad: 1
+      cantidad: 1,
     });
   }
 
