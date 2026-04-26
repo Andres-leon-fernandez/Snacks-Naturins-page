@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naturin's – Snacks Naturales del Perú</title>
+  <link rel="icon" href="img/Naturins-logo-mobile.svg" type="image/svg+xml">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- ── HEADER ── -->
+  <header id="header"
+    class="sticky top-0 w-full z-50 bg-white/97 backdrop-blur-md border-b-2 border-[#F1860B] h-[70px] flex items-center justify-between px-10 gap-6 shadow-sm">
+  </header>
+
+  <section id="detalle_producto" class="max-w-6xl mx-auto px-6 py-10"></section>
+
+  <section class="max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-['Amaranth'] mb-6 text-[#1a4731]">
+      Productos relacionados
+    </h2>
+
+    <div id="relacionados" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer" class="bg-[#733702] text-white border-t-4 border-[#F1860B] pt-14 pb-8 px-6"></footer>
+
+  <script src="js/productos-js/addProductos.js"></script>
+  <script src="js/index-js/loadComponent.js"></script>
+  <script src="js/productos-js/pageForProduct.js"></script>
+</body>
+
+</html>

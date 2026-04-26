@@ -9,74 +9,114 @@ document.addEventListener("DOMContentLoaded", () => {
       pro.descripcion ||
       "Delicioso snack artesanal, preparado con los mejores ingredientes naturales.";
 
-    item.className =
-      "bg-white rounded-[2rem] shadow-xl overflow-hidden hover:shadow-2xl transition duration-300";
+    // ✅ Sin clases duplicadas en el wrapper — el article ya tiene todo
+    item.className = "h-full";
 
     item.innerHTML = `
-                <!-- Imagen -->
-                <div class="relative w-full aspect-[4/3] overflow-hidden">
-                    <img src="${pro.imagen}"
-                        alt="${pro.nombre}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+<article
+  class="group flex h-full flex-col overflow-hidden rounded-[20px] bg-white ring-1 ring-black/10 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
-                    <!-- Favorito -->
-                    <button
-                        class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-sm hover:bg-orange-50 transition">
-                        ☆
-                    </button>
-                </div>
+  <!-- Imagen -->
+  <div class="relative w-full aspect-[4/3] overflow-hidden bg-[#fff8ef]">
+    <img src="${pro.imagen}" alt="${pro.nombre}" loading="lazy"
+      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
 
-                <!-- Info -->
-                <div class="p-5">
-                    <div class="flex items-start justify-between gap-3">
-                        <span class="inline-flex items-center rounded-full bg-orange-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-orange-600">
-                            ${categoriaNombre}
-                        </span>
-                        <span class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-white">
-                            ${pro.rating.toFixed(1)}
-                        </span>
-                    </div>
+    ${pro.nuevo ? `<span class="absolute top-2.5 left-2.5 rounded-full bg-[#733702] px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-white">Nuevo</span>` : ""}
 
-                    <h2 class="mt-4 text-xl font-semibold leading-tight text-slate-900">
-                        ${pro.nombre}
-                    </h2>
+    <button
+      class="fav-btn absolute right-2.5 top-2.5 grid h-[34px] w-[34px] place-items-center rounded-full bg-white/90 text-[#733702] backdrop-blur-sm transition duration-200 hover:bg-[#F1860B] hover:text-white border-0 cursor-pointer text-[15px]"
+      aria-label="Marcar como favorito">♡</button>
+  </div>
 
-                    <p class="text-sm text-slate-500 mt-3 line-clamp-3">
-                        ${descripcion}
-                    </p>
+  <!-- Info -->
+  <div class="flex flex-1 flex-col p-4">
 
-                    <div class="mt-5 flex items-center justify-between gap-4">
-                        <div>
-                            <p class="text-sm text-slate-500">Precio</p>
-                            <p class="text-2xl font-bold text-slate-900">S/ ${pro.precio.toFixed(2)}</p>
-                        </div>
+    <div class="flex items-center justify-between gap-2">
+      <span class="inline-flex items-center rounded-full bg-[#F1860B]/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#F1860B]">
+        ${categoriaNombre}
+      </span>
+      <span class="inline-flex items-center gap-1 rounded-full bg-[#733702] px-2.5 py-0.5 text-[11px] font-semibold text-white">
+        <span class="inline-block h-2 w-2 bg-yellow-300"
+          style="clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></span>
+        ${pro.rating.toFixed(1)}
+      </span>
+    </div>
 
-                        <!-- Botón de acción (carrito) -->
+    <h2 class="mt-3 font-['Amaranth'] text-[1.1rem] leading-snug text-slate-900">
+      ${pro.nombre}
+    </h2>
 
-                        <a href="carrito.html"
-                          class="btn-carrito group inline-flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition transform hover:scale-110 active:scale-95"
-                          data-id="${pro.id}">
-  
+    <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-500 line-clamp-3">
+      ${descripcion}
+    </p>
 
-                            <!-- Icono (+) -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:hidden" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 4v16m8-8H4" />
-                            </svg>
+    <p class="mt-3.5 text-[10px] uppercase tracking-[0.14em] text-slate-400">Precio</p>
+    <p class="mt-0.5 text-[1.35rem] font-bold tracking-tight text-slate-900">
+      S/ ${pro.precio.toFixed(2)}
+    </p>
 
-                            <!-- Icono carrito -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden group-hover:block" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M10 21a1 1 0 100-2 1 1 0 000 2zm7 0a1 1 0 100-2 1 1 0 000 2z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-    `;
+    <div class="mt-auto pt-3.5 flex items-center justify-between gap-2">
+      <a href="producto.html?id=${pro.id}"
+        class="inline-flex items-center justify-center rounded-[10px] border-[1.5px] border-[#F1860B] px-3.5 py-1.5 text-[12.5px] font-semibold text-[#F1860B] transition duration-200 hover:bg-[#F1860B] hover:text-white">
+        Ver más
+      </a>
+
+      <!-- ✅ Cambiado a <button> — ya no navega a carrito.html -->
+      <button
+        class="btn-carrito inline-grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#F1860B] text-white transition duration-200 hover:bg-[#E52619] active:scale-95"
+        data-id="${pro.id}"
+        aria-label="Agregar al carrito">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M10 21a1 1 0 100-2 1 1 0 000 2zm7 0a1 1 0 100-2 1 1 0 000 2z"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</article>`;
 
     return item;
   }
+
+  // ✅ Delegación en document para .fav-btn — funciona aunque se rerenderice el grid
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".fav-btn");
+    if (!btn) return;
+
+    const estaActivo = btn.dataset.active === "1";
+    btn.dataset.active = estaActivo ? "" : "1";
+    btn.textContent = estaActivo ? "♡" : "♥";
+
+    // ✅ Clases estáticas en lugar de JIT dinámico para evitar purge issues
+    if (estaActivo) {
+      btn.style.background = "rgba(255,255,255,0.92)";
+      btn.style.color = "#733702";
+    } else {
+      btn.style.background = "#F1860B";
+      btn.style.color = "#fff";
+    }
+  });
+
+  // ✅ Delegación en contenedor para .btn-carrito — reemplaza el forEach post-render
+  contenedor.addEventListener("click", (e) => {
+    const btn = e.target.closest(".btn-carrito");
+    if (!btn) return;
+
+    // Animación
+    btn.classList.add("scale-125");
+    setTimeout(() => btn.classList.remove("scale-125"), 150);
+
+    const id = btn.dataset.id;
+    const producto = productosGlobal.find((p) => String(p.id) === String(id));
+
+    if (!producto) return; // ✅ Guard: evita llamar agregarAlCarrito con undefined
+
+    agregarAlCarrito(producto);
+  });
+
+  // ✅ Variable en scope del módulo para que la delegación pueda acceder a los datos
+  let productosGlobal = [];
 
   function renderizarProductos(productos) {
     contenedor.innerHTML = "";
@@ -88,11 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const fragment = document.createDocumentFragment();
-
-    productos.forEach((pro) => {
-      fragment.appendChild(crearCard(pro));
-    });
-
+    productos.forEach((pro) => fragment.appendChild(crearCard(pro)));
     contenedor.appendChild(fragment);
   }
 
@@ -111,27 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
         categorias.map((cat) => [cat.id, cat.nombre]),
       );
 
-      const productosConCategoria = productos.map((pro) => ({
+      productosGlobal = productos.map((pro) => ({
         ...pro,
         categoriaNombre: categoriasMap[pro.categoria] || "Sin categoría",
       }));
 
-      renderizarProductos(productosConCategoria);
-
-      // EVENTO CLICK
-      document.querySelectorAll(".btn-carrito").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          // 🔥 animación botón
-          btn.classList.add("scale-125");
-          setTimeout(() => {
-            btn.classList.remove("scale-125");
-          }, 150);
-
-          const id = btn.dataset.id;
-          const producto = productosConCategoria.find((p) => p.id == id);
-          agregarAlCarrito(producto);
-        });
-      });
+      renderizarProductos(productosGlobal);
     })
     .catch(() => {
       contenedor.innerHTML =
@@ -158,18 +179,20 @@ function agregarAlCarrito(producto) {
 
   localStorage.setItem("carrito", JSON.stringify(carrito));
 
-  // 🔥 ACTUALIZAR CONTADOR (forzado seguro)
-  setTimeout(() => {
-    if (typeof actualizarContador === "function") {
-      actualizarContador();
-      animarContador();
-    }
-  }, 50);
+  // Actualizar interfaz
+  if (typeof actualizarContador === "function") {
+    actualizarContador();
+  }
 
-  // 🔥 feedback visual
+  // Animar contador
+  const contador = document.getElementById("contador-carrito");
+  if (contador) {
+    contador.classList.add("scale-125");
+    setTimeout(() => contador.classList.remove("scale-125"), 200);
+  }
+
   mostrarToast("Producto agregado al carrito");
 
-  // 🔥 abrir mini carrito automáticamente
   const mini = document.getElementById("mini-carrito");
   if (mini) {
     mini.classList.remove("hidden");
@@ -177,37 +200,23 @@ function agregarAlCarrito(producto) {
   }
 }
 
-// 🔔 TOAST BONITO
 function mostrarToast(mensaje) {
   const toast = document.createElement("div");
-
-  toast.className = `
-    fixed bottom-6 right-6 bg-[#1a4731] text-white px-5 py-3 rounded-xl shadow-lg 
-    opacity-0 translate-y-5 transition-all duration-300 z-50
-  `;
-
+  toast.className =
+    "fixed bottom-6 right-6 bg-[#1a4731] text-white px-5 py-3 rounded-xl shadow-lg opacity-0 translate-y-5 transition-all duration-300 z-50";
   toast.textContent = mensaje;
-
   document.body.appendChild(toast);
 
-  setTimeout(() => {
-    toast.classList.remove("opacity-0", "translate-y-5");
-  }, 10);
-
+  setTimeout(() => toast.classList.remove("opacity-0", "translate-y-5"), 10);
   setTimeout(() => {
     toast.classList.add("opacity-0", "translate-y-5");
     setTimeout(() => toast.remove(), 300);
   }, 2000);
 }
 
-// 🔴 ANIMACIÓN CONTADOR
 function animarContador() {
   const contador = document.getElementById("contador-carrito");
   if (!contador) return;
-
   contador.classList.add("scale-125");
-
-  setTimeout(() => {
-    contador.classList.remove("scale-125");
-  }, 200);
+  setTimeout(() => contador.classList.remove("scale-125"), 200);
 }
