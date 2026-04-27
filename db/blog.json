@@ -1,0 +1,52 @@
+[
+  {
+    "id": "el-secreto-del-chifle-salado",
+    "categoria": "nutricion",
+    "titulo": "El secreto del Chifle salado",
+    "resumen": "Descubre por qué nuestro chifle es el snack favorito de Piura y cómo aporta energía natural a tu día.",
+    "descripcion": "El chifle piurano no es solo un snack, es una tradición. En Naturin's seleccionamos los mejores plátanos verdes para asegurar esa textura crocante única. Además de ser delicioso, es una excelente fuente de potasio y energía para tus actividades diarias.",
+    "imagen": "img/blog/chiflesalado.png",
+    "fecha": "26 Abr 2026",
+    "autor": "Elias"
+  },
+  {
+    "id": "bowl-saludable-habitas" ,
+    "categoria": "recetas",
+    "titulo": "Bowl Saludable con Habitas",
+    "resumen": "Aprende a preparar un bowl lleno de proteína usando nuestras habas fritas seleccionadas.",
+    "descripcion": "Las habas son una fuente increíble de proteína vegetal. En esta receta te enseñamos a combinarlas con quinoa, palta y tomate para un almuerzo rápido, nutritivo y con ese toque 'crunchy' que tanto te gusta.",
+    "imagen": "img/blog/habas.png",
+    "fecha": "25 Abr 2026",
+    "autor": "Elias"
+  },
+  {
+    "id": "snacks-sostenibles-peru",
+    "categoria": "sostenibilidad",
+    "titulo": "Snacks con Propósito",
+    "resumen": "Conoce cómo trabajamos de la mano con agricultores locales para traer lo mejor del campo a tu mesa.",
+    "descripcion": "En Naturin's creemos en el comercio justo. Trabajamos directamente con comunidades agrícolas del norte y centro del Perú, asegurando que cada bolsa que compras apoye el desarrollo de familias campesinas y el cuidado de la tierra.",
+    "imagen": "img/blog/industria.png",
+    "fecha": "24 Abr 2026",
+    "autor": "Elias"
+  },
+   {
+   "id": "cultivando-futuro-peru",
+    "categoria": "comunidad",
+    "titulo": "Cultivando Futuro: Naturin's en las Escuelas",
+    "resumen": "Llevamos nutrición y educación a comunidades rurales, enseñando la importancia de los cultivos nativos a las nuevas generaciones.",
+    "descripcion": "En Naturin's, nuestro compromiso va más allá del comercio justo. Con el programa 'Cultivando Futuro', visitamos escuelas en las zonas de donde provienen nuestros plátanos y maíz. Compartimos talleres sobre nutrición y sostenibilidad, entregando snacks saludables y material educativo. Creemos que educar sobre el valor de nuestra agricultura es la mejor forma de asegurar un futuro próspero para las comunidades que nos ven crecer.",
+    "imagen": "img/blog/comuu.png",
+    "fecha": "28 Abr 2026",
+    "autor": "Elias"
+  },
+  {
+    "id": "poder-frutos-secos",
+    "categoria": "nutricion",
+    "titulo": "El poder de los Frutos Secos",
+    "resumen": "Mejora tu concentración y salud cardiovascular con el mix perfecto de Naturin's.",
+    "descripcion": "Nuestro mix de frutos secos está diseñado para darte grasas saludables y antioxidantes. Ideal para estudiantes de la UTP o profesionales que necesitan mantener el enfoque durante largas jornadas de trabajo.",
+    "imagen": "img/blog/frutosseccos.png",
+    "fecha": "23 Abr 2026",
+    "autor": "Elias"
+  }
+]
