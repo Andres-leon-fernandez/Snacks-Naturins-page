@@ -34,6 +34,8 @@ function initHeader() {
     mini.classList.toggle("hidden");
     renderMiniCarrito();
   });
+
+  
 }
 
 //  MINI CARRITO
@@ -156,3 +158,5 @@ function eliminarDelCarrito(id) {
   renderMiniCarrito();
   actualizarContador();
 }
+
+
