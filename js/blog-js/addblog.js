@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Cargar datos del JSON
-  fetch("db/blog.json")
+  fetch("./db/blog.json")
     .then(res => res.json())
     .then(datos => {
       articulosGlobal = datos;
