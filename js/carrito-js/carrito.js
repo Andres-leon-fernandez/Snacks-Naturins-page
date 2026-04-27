@@ -177,6 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
       descuento = 10;
     } else if (codigo === "enviogratis") {
       envioSelect.value = 0;
+      descuento = 0; // sin descuento directo, pero el envío se vuelve gratis
     } else if (codigo !== "") {
       alert("Cupón inválido");
     }

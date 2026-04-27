@@ -1,6 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   loadComponent("footer", "js/component/footer.html");
-  loadComponent("header", "js/component/header.html", initHeader);
+  loadComponent("header", "js/component/header.html", () => {
+    initHeader();
+    initLogin();
+  });
+
+  // Cargar el script del login después de cargar los componentes
+  const scriptLogin = document.createElement("script");
+  scriptLogin.src = "js/component/login.js";
+  scriptLogin.defer = true;
+  document.body.appendChild(scriptLogin);
 });
 
 function loadComponent(id, path, callback) {
