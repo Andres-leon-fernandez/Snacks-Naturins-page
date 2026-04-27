@@ -4,17 +4,17 @@
     "categoria": "nutricion",
     "titulo": "El secreto del Chifle salado",
     "resumen": "Descubre por qué nuestro chifle es el snack favorito de Piura y cómo aporta energía natural a tu día.",
-    "descripcion": "El chifle piurano no es solo un snack, es una tradición. En Naturin's seleccionamos los mejores plátanos verdes para asegurar esa textura crocante única. Además de ser delicioso, es una excelente fuente de potasio y energía para tus actividades diarias.",
+    "descripcion": "El chifle piurano no es solo un snack, es una tradición arraigada en el corazón del norte peruano. En Naturin's seleccionamos meticulosamente los mejores plátanos verdes de manos de productores locales para asegurar esa textura crocante única que nos caracteriza. Además de ser delicioso, el plátano verde es una excelente fuente de potasio y carbohidratos complejos, proporcionando la energía sostenida necesaria para tus actividades diarias sin recurrir a azúcares procesados. Cada hojuela está frita al punto exacto para mantener su valor nutricional y ese sabor auténtico que te transporta directamente a las tierras piuranas.",
     "imagen": "img/blog/chiflesalado.png",
     "fecha": "26 Abr 2026",
     "autor": "Elias"
   },
   {
-    "id": "bowl-saludable-habitas" ,
+    "id": "bowl-saludable-habitas",
     "categoria": "recetas",
     "titulo": "Bowl Saludable con Habitas",
     "resumen": "Aprende a preparar un bowl lleno de proteína usando nuestras habas fritas seleccionadas.",
-    "descripcion": "Las habas son una fuente increíble de proteína vegetal. En esta receta te enseñamos a combinarlas con quinoa, palta y tomate para un almuerzo rápido, nutritivo y con ese toque 'crunchy' que tanto te gusta.",
+    "descripcion": "Las habas son una joya de los Andes y una de las fuentes más increíbles de proteína vegetal y fibra disponibles en nuestra biodiversidad. En esta receta, te enseñamos a elevar tus almuerzos combinándolas con superalimentos como la quinoa, palta cremosa y tomates frescos. Al añadir nuestras habitas Naturin's, no solo incorporas un toque 'crunchy' irresistible, sino también un extra de nutrición que te mantendrá satisfecho por más tiempo. Es la opción ideal para quienes buscan una comida rápida, equilibrada y con un perfil nutricional completo que apoye la recuperación muscular y la salud digestiva.",
     "imagen": "img/blog/habas.png",
     "fecha": "25 Abr 2026",
     "autor": "Elias"
@@ -24,17 +24,17 @@
     "categoria": "sostenibilidad",
     "titulo": "Snacks con Propósito",
     "resumen": "Conoce cómo trabajamos de la mano con agricultores locales para traer lo mejor del campo a tu mesa.",
-    "descripcion": "En Naturin's creemos en el comercio justo. Trabajamos directamente con comunidades agrícolas del norte y centro del Perú, asegurando que cada bolsa que compras apoye el desarrollo de familias campesinas y el cuidado de la tierra.",
+    "descripcion": "En Naturin's creemos firmemente que el éxito empresarial debe ir de la mano con la responsabilidad social. Nuestro modelo de negocio se basa en el comercio justo, trabajando directamente con comunidades agrícolas del norte y centro del Perú. Al eliminar intermediarios innecesarios, aseguramos que cada bolsa que compras apoye de manera tangible el desarrollo económico de familias campesinas y promueva prácticas de cultivo que respetan los ciclos de la tierra. Elegir nuestros snacks significa votar por un sistema alimentario más humano, transparente y comprometido con la preservación de nuestro entorno natural para las futuras generaciones.",
     "imagen": "img/blog/industria.png",
     "fecha": "24 Abr 2026",
     "autor": "Elias"
   },
-   {
-   "id": "cultivando-futuro-peru",
+  {
+    "id": "cultivando-futuro-peru",
     "categoria": "comunidad",
     "titulo": "Cultivando Futuro: Naturin's en las Escuelas",
     "resumen": "Llevamos nutrición y educación a comunidades rurales, enseñando la importancia de los cultivos nativos a las nuevas generaciones.",
-    "descripcion": "En Naturin's, nuestro compromiso va más allá del comercio justo. Con el programa 'Cultivando Futuro', visitamos escuelas en las zonas de donde provienen nuestros plátanos y maíz. Compartimos talleres sobre nutrición y sostenibilidad, entregando snacks saludables y material educativo. Creemos que educar sobre el valor de nuestra agricultura es la mejor forma de asegurar un futuro próspero para las comunidades que nos ven crecer.",
+    "descripcion": "Nuestro compromiso social trasciende la comercialización de productos. A través del programa institucional 'Cultivando Futuro', visitamos diversas escuelas rurales ubicadas en las zonas de origen de nuestros principales insumos, como el plátano y el maíz. En estas jornadas, impartimos talleres interactivos sobre nutrición básica y sostenibilidad ambiental, buscando revalorizar los cultivos nativos frente a los productos ultraprocesados. Entregamos snacks saludables y materiales educativos diseñados para inspirar a los niños a sentirse orgullosos de su herencia agrícola. Creemos que empoderar a la infancia es la semilla más importante para asegurar un futuro próspero y saludable en nuestro país.",
     "imagen": "img/blog/comuu.png",
     "fecha": "28 Abr 2026",
     "autor": "Elias"
@@ -44,7 +44,7 @@
     "categoria": "nutricion",
     "titulo": "El poder de los Frutos Secos",
     "resumen": "Mejora tu concentración y salud cardiovascular con el mix perfecto de Naturin's.",
-    "descripcion": "Nuestro mix de frutos secos está diseñado para darte grasas saludables y antioxidantes. Ideal para estudiantes de la UTP o profesionales que necesitan mantener el enfoque durante largas jornadas de trabajo.",
+    "descripcion": "Nuestro mix de frutos secos ha sido cuidadosamente diseñado por expertos para ofrecerte el equilibrio perfecto entre grasas monoinsaturadas (saludables para el corazón), vitaminas del complejo B y potentes antioxidantes. Este snack es el aliado estratégico para estudiantes universitarios y profesionales de alta exigencia que necesitan mantener un enfoque mental óptimo durante jornadas prolongadas. Además de proteger tu salud cardiovascular, los frutos secos ayudan a regular los niveles de glucosa en sangre, evitando los bajones de energía a mitad de la tarde. Es, sin duda, la combustible natural por excelencia para un cerebro activo y un cuerpo sano.",
     "imagen": "img/blog/frutosseccos.png",
     "fecha": "23 Abr 2026",
     "autor": "Elias"

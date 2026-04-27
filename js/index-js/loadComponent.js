@@ -35,7 +35,38 @@ function initHeader() {
     renderMiniCarrito();
   });
 
-  
+  // --- MOVER SIDEBAR Y OVERLAY AL BODY ---
+  // Esto corrige el problema de "fixed" dentro de un padre con "backdrop-blur" o "transform"
+  const sidebar = document.getElementById('sidebar-menu');
+  const overlay = document.getElementById('menu-overlay');
+  if (sidebar) document.body.appendChild(sidebar);
+  if (overlay) document.body.appendChild(overlay);
+
+  // --- CONTROL DEL MENÚ HAMBURGUESA ---
+  const btnOpen = document.getElementById('menu-toggle');
+  const btnClose = document.getElementById('menu-close');
+  // Re-capturamos después de moverlos (opcional pero seguro)
+  const sidebarRef = document.getElementById('sidebar-menu');
+  const overlayRef = document.getElementById('menu-overlay');
+
+  function toggleMenu() {
+      if (!sidebarRef || !overlayRef) return;
+      
+      sidebarRef.classList.toggle('-translate-x-full');
+      overlayRef.classList.toggle('opacity-0');
+      overlayRef.classList.toggle('pointer-events-none');
+      document.body.classList.toggle('overflow-hidden');
+  }
+
+  if (btnOpen) {
+      btnOpen.addEventListener('click', (e) => {
+          e.preventDefault();
+          toggleMenu();
+      });
+  }
+
+  if (btnClose) btnClose.addEventListener('click', toggleMenu);
+  if (overlayRef) overlayRef.addEventListener('click', toggleMenu);
 }
 
 //  MINI CARRITO
