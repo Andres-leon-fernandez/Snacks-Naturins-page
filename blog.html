@@ -25,7 +25,50 @@
   </header>
 
   <!-- Main-->
-  <main class="flex-grow"></main>
+ <main class="flex-grow">
+
+  <section class="relative py-20 px-6 overflow-hidden" 
+           style="background-image: url('img/blog/fondo.png'); background-size: cover; background-position: center;">
+    
+    <div class="absolute inset-0 bg-black/20 z-0"></div>
+
+    <div class="absolute top-0 right-0 opacity-10 pointer-events-none z-10">
+      <i class="fa-solid fa-seedling text-[200px] -rotate-12 text-white"></i>
+    </div>
+    
+    <div class="container mx-auto text-center relative z-20">
+      <h1 class="font-['Amaranth'] text-5xl md:text-6xl text-[#F1860B] mb-6 drop-shadow-lg">
+        Cosechando Sabores
+      </h1>
+      <p class="text-white text-xl max-w-2xl mx-auto font-bold leading-relaxed drop-shadow-md">
+        Tu guía diaria de bienestar, nutrición y el auténtico sabor de los snacks peruanos.
+      </p>
+    </div>
+  </section>
+
+    <section class="py-8 border-b border-orange-200 bg-white/50">
+      <div id="filtros-blog" class="container mx-auto px-6 flex flex-wrap justify-center gap-4 text-xs font-bold uppercase tracking-widest">
+    <button data-categoria="todos" class="filter-btn px-6 py-2 bg-[#F1860B] text-white rounded-full shadow-md cursor-pointer">Todos</button>
+    <button data-categoria="nutricion" class="filter-btn px-6 py-2 bg-white text-[#733702] rounded-full border border-orange-200 cursor-pointer">Nutrición</button>
+    <button data-categoria="recetas" class="filter-btn px-6 py-2 bg-white text-[#733702] rounded-full border border-orange-200 cursor-pointer">Recetas</button>
+    <button data-categoria="sostenibilidad" class="filter-btn px-6 py-2 bg-white text-[#733702] rounded-full border border-orange-200 cursor-pointer">Sostenibilidad</button>
+    <button data-categoria="comunidad" class="filter-btn px-6 py-2 bg-white text-[#733702] rounded-full border border-orange-200 cursor-pointer">Comunidad</button>
+      </div>
+    </section>
+
+    <section class="py-16 px-6">
+      <div class="container mx-auto">
+        <div id="grid-blog" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div class="col-span-full text-center py-20">
+            <p class="text-gray-400 animate-pulse italic">Preparando snacks saludables...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/blog-js/addBlog.js"></script>
 
   <!-- ── FOOTER ── -->
   <footer id="footer" class="bg-[#733702] text-white border-t-4 border-[#F1860B] pt-14 pb-8 px-6"></footer>
