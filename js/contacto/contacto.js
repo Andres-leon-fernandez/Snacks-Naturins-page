@@ -1,13 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("formulario");
+  const form = document.getElementById("form-contacto");
+  const respuesta = document.getElementById("form-respuesta");
 
-  if (!form) return;
-
-  form.addEventListener("submit", function(e) {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    alert("Mensaje enviado correctamente ✅");
+    const data = new FormData(form);
 
-    form.reset();
+    // Validación
+    for (let value of data.values()) {
+      if (!value.trim()) {
+        respuesta.textContent = "Por favor completa todos los campos.";
+        respuesta.style.color = "red";
+        return;
+      }
+    }
+
+    try {
+      const resp = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (resp.ok) {
+        respuesta.textContent = "✅ Mensaje enviado correctamente";
+        respuesta.style.color = "#98C01E";
+        form.reset();
+      } else {
+        respuesta.textContent = "⚠️ Error al enviar el mensaje";
+        respuesta.style.color = "red";
+      }
+
+    } catch (error) {
+      respuesta.textContent = "❌ Error de conexión";
+      respuesta.style.color = "red";
+    }
   });
 });
